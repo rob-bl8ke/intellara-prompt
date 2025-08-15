@@ -1,0 +1,45 @@
+<div class="prompt-list-container">
+<div class="search-filters">
+<div class="search-bar">
+<input
+type="text"
+placeholder="Search prompts..."
+[(ngModel)]="searchTerm"
+(input)="onSearchChange()"
+class="search-input">
+</div>
+
+        <div class="tag-filters">
+          <h3>Filter by Tags:</h3>
+          <div class="tag-list">
+            <label *ngFor="let tag of allTags$ | async" class="tag-checkbox">
+              <input
+                type="checkbox"
+                [value]="tag"
+                (change)="onTagChange($event, tag)">
+              <span class="tag">{{ tag }}</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompts-grid">
+        <div
+          *ngFor="let prompt of filteredPrompts$ | async"
+          class="prompt-card"
+          (click)="selectPrompt(prompt.id)">
+          <div class="prompt-header">
+            <h3>{{ prompt.title }}</h3>
+            <span class="category">{{ prompt.category }}</span>
+          </div>
+          <p class="description">{{ prompt.description }}</p>
+          <div class="tags">
+            <span *ngFor="let tag of prompt.tags" class="tag">{{ tag }}</span>
+          </div>
+          <div class="metadata">
+            <span class="author" *ngIf="prompt.author">By {{ prompt.author }}</span>
+            <span class="date">{{ prompt.createdDate | date:'shortDate' }}</span>
+          </div>
+        </div>
+      </div>
+    </div>

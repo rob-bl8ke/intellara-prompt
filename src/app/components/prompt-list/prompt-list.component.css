@@ -1,0 +1,114 @@
+.prompt-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+
+    .search-filters {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .tag-filters h3 {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .prompts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 20px;
+    }
+
+    .prompt-card {
+      background: white;
+      border: 1px solid #e1e5e9;
+      border-radius: 8px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .prompt-card:hover {
+      border-color: #007bff;
+      box-shadow: 0 4px 12px rgba(0,123,255,0.15);
+    }
+
+    .prompt-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .prompt-header h3 {
+      margin: 0;
+      color: #333;
+      font-size: 18px;
+    }
+
+    .category {
+      background: #007bff;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .description {
+      color: #666;
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 15px 0;
+    }
+
+    .tag {
+      background: #e9ecef;
+      color: #495057;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      border: 1px solid #dee2e6;
+    }
+
+    .metadata {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #e9ecef;
+      font-size: 14px;
+      color: #6c757d;
+    }
