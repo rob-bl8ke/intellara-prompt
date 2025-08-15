@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PromptListComponentComponent } from './prompt-list.component';
+import { PromptListComponent } from './prompt-list.component';
 
 describe('PromptListComponentComponent', () => {
-  let component: PromptListComponentComponent;
-  let fixture: ComponentFixture<PromptListComponentComponent>;
+  let component: PromptListComponent;
+  let fixture: ComponentFixture<PromptListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PromptListComponentComponent]
+      imports: [PromptListComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(PromptListComponentComponent);
+    fixture = TestBed.createComponent(PromptListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
